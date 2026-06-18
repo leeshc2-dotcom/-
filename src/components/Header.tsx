@@ -109,14 +109,14 @@ export default function Header() {
             <div className="relative group ml-4 flex items-center h-full">
               <button type="button" className="flex items-center gap-1.5 text-sm font-bold tracking-wide text-emerald-400 hover:text-emerald-300 transition-colors focus:outline-none py-2 shrink-0">
                 <Globe className="w-4 h-4" />
-                KOREAN
+                ENGLISH
               </button>
               <div className="absolute right-0 top-full mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="bg-white shadow-xl flex flex-col w-32 border border-slate-100/50">
-                  <a href="https://example.com/en" target="_blank" rel="noopener noreferrer" className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center border-b border-slate-200 transition-colors">
+                  <a href="https://worldwidemusic-en.netlify.app/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center border-b border-slate-200 transition-colors">
                     English
                   </a>
-                  <a href="https://example.com/ko" target="_blank" rel="noopener noreferrer" className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center transition-colors">
+                  <a href="https://worldwidemusic-kr.netlify.app/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center transition-colors">
                     Korean
                   </a>
                 </div>
@@ -169,13 +169,13 @@ export default function Header() {
             <div className="px-4 py-2">
               <div className="flex items-center gap-2 mb-3 text-emerald-400 font-bold text-sm tracking-wide">
                 <Globe className="w-4 h-4" />
-                KOREAN
+                ENGLISH
               </div>
               <div className="flex flex-col ml-6 gap-3">
-                <a href="https://example.com/en" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors">
+                <a href="https://worldwidemusic-en.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors">
                   English
                 </a>
-                <a href="https://example.com/ko" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors">
+                <a href="https://worldwidemusic-kr.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors">
                   Korean
                 </a>
               </div>

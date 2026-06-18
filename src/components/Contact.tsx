@@ -15,7 +15,7 @@ export default function Contact() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
         
-        <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-amber-500 font-bold mb-4">
+        <h2 className="text-[10px] sm:text-xs font-mono uppercase tracking-widest sm:tracking-[0.25em] text-amber-500 font-bold mb-4 break-words">
           Connect With Us
         </h2>
         <p className="text-3xl sm:text-4xl font-sans font-extrabold text-white tracking-tight leading-tight">

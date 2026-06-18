@@ -26,7 +26,7 @@ export default function Services() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-amber-500 font-bold mb-4">
+          <h2 className="text-[10px] sm:text-xs font-mono uppercase tracking-widest sm:tracking-[0.25em] text-amber-500 font-bold mb-4 break-words">
             Services & Capabilities
           </h2>
           <p className="text-3xl sm:text-4xl font-sans font-extrabold text-white tracking-tight">

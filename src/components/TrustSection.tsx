@@ -25,8 +25,8 @@ export default function TrustSection() {
         {/* Layout: Two columns - Left is statement, Right is pillars */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
-          <div className="lg:col-span-4 sticky top-28">
-            <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-amber-500 font-bold mb-4">
+          <div className="lg:col-span-4 lg:sticky lg:top-28">
+            <h2 className="text-[10px] sm:text-xs font-mono uppercase tracking-widest sm:tracking-[0.25em] text-amber-500 font-bold mb-4 break-words">
               Strategic Partnership Core
             </h2>
             <p className="text-3xl sm:text-4xl font-sans font-extrabold text-white tracking-tight leading-tight">
@@ -79,7 +79,7 @@ export default function TrustSection() {
                   </div>
 
                   {pillar.metric && (
-                    <div className="border-l border-slate-850/80 pl-6 sm:border-l-2 sm:border-slate-800/60 w-full sm:w-auto text-left shrink-0">
+                    <div className="border-l border-slate-800/80 pl-6 sm:border-l-2 sm:border-slate-800/60 w-full sm:w-auto text-left shrink-0">
                       <div className="font-sans font-black text-2xl sm:text-3xl text-amber-500 tracking-tight">
                         {pillar.metric}
                       </div>

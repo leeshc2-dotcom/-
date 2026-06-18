@@ -110,7 +110,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.6 }}
           className="mt-20 border-t border-slate-900 pt-10 w-full"
         >
-          <p className="text-sm font-mono uppercase tracking-[0.2em] text-slate-500 font-semibold">
+          <p className="text-xs sm:text-sm font-mono uppercase tracking-widest sm:tracking-[0.2em] text-slate-500 font-semibold break-words">
             Fully compliant and integrated copyright administration pipelines
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">

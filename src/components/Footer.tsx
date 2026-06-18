@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Column 2 - Sitemap shortcuts */}
           <div className="md:col-span-3">
-            <h4 className="text-xs font-mono tracking-[0.2em] text-amber-500 uppercase font-black mb-4">
+            <h4 className="text-[10px] sm:text-xs font-mono tracking-widest sm:tracking-[0.2em] text-amber-500 uppercase font-black mb-4 break-words">
               Corporate Sitemap
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Column 3 - Technical Registries */}
           <div className="md:col-span-4 select-none">
-            <h4 className="text-xs font-mono tracking-[0.2em] text-amber-500 uppercase font-black mb-4">
+            <h4 className="text-[10px] sm:text-xs font-mono tracking-widest sm:tracking-[0.2em] text-amber-500 uppercase font-black mb-4 break-words">
               Official Registries & Affiliation
             </h4>
             <ul className="flex flex-col gap-3">
