@@ -23,7 +23,6 @@ export default function Services() {
   return (
     <section id="services" className="py-24 bg-slate-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-[10px] sm:text-xs font-mono uppercase tracking-widest sm:tracking-[0.25em] text-amber-500 font-bold mb-4 break-words">
@@ -33,7 +32,9 @@ export default function Services() {
             Comprehensive Copyright Administration
           </p>
           <p className="mt-4 text-slate-400 text-sm leading-relaxed">
-            We provide fully integrated administration services designed for catalog security, swift royalty claims, and frictionless sub-publishing. Click each pillar to explore.
+            We provide fully integrated administration services designed for
+            catalog security, swift royalty claims, and frictionless
+            sub-publishing. Click each pillar to explore.
           </p>
         </div>
 
@@ -42,7 +43,7 @@ export default function Services() {
           {services.map((service) => {
             const SvcIcon = iconMap[service.icon] || HelpCircle;
             const isSelected = service.id === activeTab;
-            
+
             return (
               <button
                 key={service.id}
@@ -74,7 +75,11 @@ export default function Services() {
                       {service.title}
                     </h3>
                     <p className="font-mono text-[9px] text-amber-500/80 tracking-widest font-bold mt-0.5">
-                      {service.id === "sub-pub" ? "ADMIN" : service.id === "sync" ? "CREATIVE" : "FINANCE"}
+                      {service.id === "sub-pub"
+                        ? "ADMIN"
+                        : service.id === "sync"
+                          ? "CREATIVE"
+                          : "FINANCE"}
                     </p>
                   </div>
                 </div>
@@ -85,7 +90,9 @@ export default function Services() {
 
                 <div className="mt-4 flex items-center gap-1.5 text-[10px] font-sans font-bold uppercase tracking-wider text-amber-500 opacity-80 group-hover:opacity-100 transition-opacity">
                   <span>View Details</span>
-                  <span className="text-amber-400 group-hover:translate-x-0.5 transition-transform duration-200">→</span>
+                  <span className="text-amber-400 group-hover:translate-x-0.5 transition-transform duration-200">
+                    →
+                  </span>
                 </div>
               </button>
             );
@@ -103,9 +110,8 @@ export default function Services() {
               transition={{ duration: 0.35 }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
             >
-              
               {/* Detailed Text Block */}
-              <div className="lg:col-span-7 flex flex-col justify-center orders-2 lg:order-1">
+              <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
                     <IconComponent className="w-5 h-5" />
@@ -146,11 +152,9 @@ export default function Services() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
               </div>
-
             </motion.div>
           </AnimatePresence>
         </div>
-
       </div>
     </section>
   );

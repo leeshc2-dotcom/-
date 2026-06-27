@@ -39,15 +39,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isScrolled]);
 
-  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleScrollTo = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
     e.preventDefault();
     setIsOpen(false);
     const element = document.getElementById(id);
     const headerElement = document.getElementById("site-header");
     const offset = headerElement ? headerElement.offsetHeight : 80;
-    
+
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - offset,
         behavior: "smooth",
@@ -78,11 +82,11 @@ export default function Header() {
               <LogoIcon className="w-8 h-8" />
               <div className="absolute inset-0 rounded-lg bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div>
-              <span className="font-sans font-extrabold text-[1.375rem] tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-200 bg-clip-text text-transparent">
+            <div className="flex flex-col justify-center">
+              <span className="font-sans font-extrabold text-xl sm:text-[1.375rem] tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-200 bg-clip-text text-transparent leading-none sm:leading-normal">
                 WorldWide
               </span>
-              <span className="hidden sm:block font-mono text-xs uppercase tracking-[0.25em] text-amber-500 font-bold">
+              <span className="block font-mono text-[9px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-amber-500 font-bold mt-0.5 sm:mt-0">
                 MUSIC GROUP
               </span>
             </div>
@@ -107,16 +111,25 @@ export default function Header() {
             ))}
 
             <div className="relative group ml-4 flex items-center h-full">
-              <button type="button" className="flex items-center gap-1.5 text-sm font-bold tracking-wide text-emerald-400 hover:text-emerald-300 transition-colors focus:outline-none py-2 shrink-0">
+              <button
+                type="button"
+                className="flex items-center gap-1.5 text-sm font-bold tracking-wide text-emerald-400 hover:text-emerald-300 transition-colors focus:outline-none py-2 shrink-0"
+              >
                 <Globe className="w-4 h-4" />
                 ENGLISH
               </button>
               <div className="absolute right-0 top-full mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="bg-white shadow-xl flex flex-col w-32 border border-slate-100/50">
-                  <a href="https://wwmusic-test.store/" className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center border-b border-slate-200 transition-colors">
+                  <a
+                    href="https://wwmusic-test.store/"
+                    className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center border-b border-slate-200 transition-colors"
+                  >
                     English
                   </a>
-                  <a href="https://kr.wwmusic-test.store/" className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center transition-colors">
+                  <a
+                    href="https://kr.wwmusic-test.store/"
+                    className="px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 font-sans font-bold text-center transition-colors"
+                  >
                     Korean
                   </a>
                 </div>
@@ -135,7 +148,11 @@ export default function Header() {
               aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -163,19 +180,27 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            
+
             <div className="border-t border-slate-800 my-2 pt-2"></div>
-            
+
             <div className="px-4 py-2">
               <div className="flex items-center gap-2 mb-3 text-emerald-400 font-bold text-sm tracking-wide">
                 <Globe className="w-4 h-4" />
                 ENGLISH
               </div>
               <div className="flex flex-col ml-6 gap-3">
-                <a href="https://wwmusic-test.store/" className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors">
+                <a
+                  href="https://wwmusic-test.store/"
+                  onClick={() => setIsOpen(false)}
+                  className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors block w-full"
+                >
                   English
                 </a>
-                <a href="https://kr.wwmusic-test.store/" className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors">
+                <a
+                  href="https://kr.wwmusic-test.store/"
+                  onClick={() => setIsOpen(false)}
+                  className="text-slate-300 hover:text-white font-sans font-medium text-sm transition-colors block w-full"
+                >
                   Korean
                 </a>
               </div>

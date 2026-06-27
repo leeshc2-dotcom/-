@@ -12,9 +12,10 @@ export default function Hero() {
     const element = document.getElementById(id);
     const headerElement = document.getElementById("site-header");
     const offset = headerElement ? headerElement.offsetHeight : 80;
-    
+
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - offset,
         behavior: "smooth",
@@ -25,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-slate-950 overflow-hidden pt-24"
+      className="relative min-h-[100dvh] flex items-center justify-center bg-slate-950 overflow-hidden pt-24"
     >
       {/* Background Gradients & Grid Patterns */}
       <div className="absolute inset-0 z-0">
@@ -42,13 +43,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 bg-slate-900/90 border border-slate-800/80 px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 mb-8 uppercase tracking-widest backdrop-blur"
+          className="inline-flex items-center gap-2 bg-slate-900/90 border border-slate-800/80 px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold text-slate-300 mb-8 uppercase tracking-wider sm:tracking-widest backdrop-blur max-w-full text-center"
         >
-          <span className="relative flex h-2 w-2">
+          <span className="relative flex h-2 w-2 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
           </span>
-          WorldWide Music • Sub-Publishing & Administration
+          <span className="truncate whitespace-normal">
+            WorldWide Music • Sub-Publishing & Administration
+          </span>
         </motion.div>
 
         {/* Headline */}
@@ -73,7 +76,10 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="max-w-3xl mt-6 text-base sm:text-lg text-slate-400 font-sans leading-relaxed text-pretty animate-fade-in"
         >
-          Maximizing international music catalog value within the fast-growing South Korean music and media market. We deliver premium sync placements, direct local royalty administration, and expert digital licensing.
+          Maximizing international music catalog value within the fast-growing
+          South Korean music and media market. We deliver premium sync
+          placements, direct local royalty administration, and expert digital
+          licensing.
         </motion.p>
 
         {/* CTAs */}
@@ -87,12 +93,12 @@ export default function Hero() {
           <button
             id="hero-primary-cta"
             onClick={() => handleScrollTo("services")}
-            className="flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-ar from-amber-500 to-amber-600 text-slate-950 px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition-all duration-200 shadow-xl shadow-amber-500/10 hover:shadow-amber-500/20 active:scale-98"
+            className="flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition-all duration-200 shadow-xl shadow-amber-500/10 hover:shadow-amber-500/20 active:scale-98"
           >
             Explore Services
             <ArrowRight className="w-4 h-4" />
           </button>
-          
+
           <button
             id="hero-secondary-cta"
             onClick={() => handleScrollTo("contact")}
@@ -113,7 +119,7 @@ export default function Hero() {
           <p className="text-xs sm:text-sm font-mono uppercase tracking-widest sm:tracking-[0.2em] text-slate-500 font-semibold break-words">
             Fully compliant and integrated copyright administration pipelines
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-8 sm:gap-x-12 gap-y-4 sm:gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
             <span className="flex items-center gap-2 text-slate-400 font-sans font-bold tracking-wider text-sm">
               <Music className="w-5 h-5 text-amber-500" /> MUSIC PRODUCTION
             </span>
